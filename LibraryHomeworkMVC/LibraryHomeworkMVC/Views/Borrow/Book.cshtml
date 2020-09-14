@@ -1,0 +1,12 @@
+﻿@model LibraryHomeworkMVC.Models.ViewModels.BorrowViewModel
+
+<form asp-route="Book" method="post">
+    <h2>Create user: </h2>
+    <label asp-for="FirstName">First Name</label>
+    <input type="text" name="FirstName" value="" /> <br />
+
+    <label asp-for="LastName">Last Name</label>
+    <input type="text" name="LastName" value="" /> <br />
+
+    <button type="submit" class="btn btn-outline-success">Borrow</button>
+</form>

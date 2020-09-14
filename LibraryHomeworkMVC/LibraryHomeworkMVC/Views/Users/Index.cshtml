@@ -1,0 +1,19 @@
+﻿<h2>Users</h2>
+@foreach (var item in Model.Users)
+{
+    <div class="card mb-2">
+        <div class="card-body">
+            <h5 class="card-title">@item.FirstName @item.LastName</h5>
+            <span>Books borrowed:@item.BooksBorrowed.Count</span>
+
+            <ul>
+                @foreach (var bookList in item.BooksBorrowed)
+                {
+                    <li class="card-text">
+                        <a href="books/details/@bookList.Id">@bookList.Name</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+}

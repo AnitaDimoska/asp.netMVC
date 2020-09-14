@@ -1,0 +1,14 @@
+﻿@model LibraryHomeworkMVC.Models.ViewModels.BooksViewModel
+
+<h2>Books</h2>
+    @foreach (var item in Model.Books)
+    {
+        <div class="card mb-2" >
+            <div class="card-body">
+                <h5 class="card-title">@item.Name</h5>
+                <p class="card-text"> @item.Autor </p>
+                <a href="borrow/book/@item.Id" class="btn btn-primary">Borrow</a>
+            </div>
+        </div>
+    }
+
